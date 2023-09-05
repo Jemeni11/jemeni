@@ -32,11 +32,6 @@ export const metadata: Metadata = {
     description: meta.description,
     images: meta.image,
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    userScalable: false,
-  },
   twitter: {
     card: "summary_large_image",
     title: meta.title,
