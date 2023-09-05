@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -53,6 +54,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
+        <Script
+          strategy="afterInteractive"
+          src="https://analytics.umami.is/script.js"
+          data-website-id="67f49d72-a29e-4e63-a538-972f67cb995b"
+        />
       </body>
     </html>
   );
