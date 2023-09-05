@@ -1,5 +1,4 @@
-"use client";
-import useScreenWidth from "../hooks/useScreenWidth";
+// import useScreenWidth from "../hooks/useScreenWidth";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../../public/apple-touch-icon.png";
@@ -12,10 +11,10 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const { isMobile, isPad } = useScreenWidth();
+  // const { isMobile, isPad } = useScreenWidth();
 
-  if (isMobile) return <MobileNav />;
-  if (isPad) return <TabNav />;
+  // if (isMobile) return <MobileNav />;
+  // if (isPad) return <TabNav />;
 
   return (
     <nav className="flex justify-between">
