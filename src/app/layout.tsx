@@ -7,32 +7,26 @@ import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const options = {
+export const metadata: Metadata = {
   title: "Emmanuel Jemeni | Front-end Developer",
+  metadataBase: new URL("https://jemeni.vercel.app"),
   description:
     "Emmanuel Jemeni is a Front-end developer focused on building responsive websites for amazing experiences on the web.",
-  url: "https://jemeni.vercel.app",
-  ogImage:
-    "https://res.cloudinary.com/dro4rspo2/image/upload/v1693898610/OG-Image_jianeb.png",
-};
-
-export const metadata: Metadata = {
-  title: options.title,
-  metadataBase: new URL(options.url),
-  description: options.description,
   openGraph: {
-    title: options.title,
-    url: options.url,
+    title: "Emmanuel Jemeni | Front-end Developer",
+    url: "https://jemeni.vercel.app",
     siteName: "vercel.app",
     locale: "en-US",
     type: "website",
-    description: options.description,
-    images: options.ogImage,
+    description:
+      "Emmanuel Jemeni is a Front-end developer focused on building responsive websites for amazing experiences on the web.",
+    images:
+      "https://res.cloudinary.com/dro4rspo2/image/upload/v1693898610/OG-Image_jianeb.png",
   },
   alternates: {
-    canonical: options.url,
+    canonical: "https://jemeni.vercel.app",
   },
-  themeColor: "#33E092",
+  themeColor: "#142538",
 };
 
 export default function RootLayout({
