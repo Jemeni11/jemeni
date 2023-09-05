@@ -5,8 +5,8 @@ import { Metadata } from "next";
 const meta = {
   title: "About | Emmanuel Jemeni",
   url: "https://jemeni.vercel.app/about",
-  description: "Get to know Emmanuel Jemeni – web enthusiast and more.",
-  image: "https://res.cloudinary.com/dro4rspo2/image/upload/v1693924615/OG-Image-Projects_bl69fp.png",
+  description: "Get to know Emmanuel Jemeni – web developer and more.",
+  image: "https://res.cloudinary.com/dro4rspo2/image/upload/v1693925474/OG-Image-About_mrdep7.png",
 };
 
 export const metadata: Metadata = {
