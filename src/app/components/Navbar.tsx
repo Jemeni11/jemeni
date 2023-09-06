@@ -1,8 +1,10 @@
 "use client";
-import useScreenWidth from "../hooks/useScreenWidth";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/apple-touch-icon.png";
+import Logo from "../../../public/favicon-32x32.png";
+import Menu from "../../../public/menu.svg";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { key: 0, name: "About", link: "/about" },
@@ -12,30 +14,29 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const { isMobile, isPad } = useScreenWidth();
+  const [mobileNavOpened, setMobileNavOpened] = useState(false);
+  const toggleMobileNav = () => setMobileNavOpened((prevState) => !prevState);
+  const activeRoute = usePathname();
 
-  if (isMobile) return <MobileNav />;
-  if (isPad) return <TabNav />;
+  useEffect(() => {
+    setMobileNavOpened(false);
+  }, [activeRoute]);
 
   return (
-    <nav className="flex justify-between">
-      <Image src={Logo} alt="logo" />
-      <ul>
+    <nav className={`${mobileNavOpened ? "dropdown-opened" : ""} px-[5%] pt-4`}>
+      <Link className="logo" href="/">
+        <Image src={Logo} alt="logo" />
+      </Link>
+      <button className="mobile-dropdown-toggle" aria-hidden="true" onClick={toggleMobileNav}>
+        <Image src={Menu} alt="Menu" />
+      </button>
+      <div className="dropdown-link-container">
         {navItems.map((item) => (
-          <li key={item.key}>
-            <Link href={item.link}>{item.name}</Link>
-          </li>
+          <Link href={item.link} key={item.key}>
+            {item.name}
+          </Link>
         ))}
-      </ul>
-      <div></div>
+      </div>
     </nav>
   );
-}
-
-function MobileNav() {
-  return <nav></nav>;
-}
-
-function TabNav() {
-  return <nav></nav>;
 }
