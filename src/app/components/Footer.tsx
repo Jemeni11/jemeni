@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../../public/favicon-32x32.png";
 
@@ -56,7 +56,7 @@ const FooterLinkItem = ({ link, name }: { link: string; name: string }) => {
 
 function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-gray-900">
       <div className="container mx-auto px-6 py-8">
         <div className="flex flex-col items-center text-center">
           <Link href="/" className="flex items-center gap-4">
@@ -72,7 +72,7 @@ function Footer() {
           </div>
         </div>
 
-        <hr className="my-6 border-gray-200 dark:border-gray-700 md:my-10" />
+        <hr className="my-6 border-gray-700 md:my-10" />
 
         <div className="flex flex-col-reverse items-center gap-4 sm:flex-row sm:justify-between">
           <div className="flex flex-col gap-1 text-center text-sm leading-8 text-textColor md:flex-row">
@@ -99,7 +99,3 @@ function Footer() {
 }
 
 export default Footer;
-
-{
-  /* <p></p> */
-}
