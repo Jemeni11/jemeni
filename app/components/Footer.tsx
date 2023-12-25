@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/favicon-32x32.png";
 
-import DevTo from "../../../public/logos/devdotto.svg";
-import Discord from "../../../public/logos/discord.svg";
-import GMail from "../../../public/logos/gmail.svg";
-import Hashnode from "../../../public/logos/hashnode.svg";
-import LinkedIn from "../../../public/logos/linkedin.svg";
-import X from "../../../public/logos/x.svg";
+import Logo from "../../public/favicon-32x32.png";
+
+import DevTo from "../../public/logos/devdotto.svg";
+import Discord from "../../public/logos/discord.svg";
+import GMail from "../../public/logos/gmail.svg";
+import Hashnode from "../../public/logos/hashnode.svg";
+import LinkedIn from "../../public/logos/linkedin.svg";
+import X from "../../public/logos/x.svg";
 
 const links: {
   name: string;
@@ -48,7 +49,7 @@ const links: {
 
 const FooterLinkItem = ({ link, name }: { link: string; name: string }) => {
   return (
-    <Link href={link} className="mx-4 text-sm text-textColor transition-colors duration-300 hover:text-blue-500" aria-label={name}>
+    <Link href={link} className="text-textColor mx-4 text-sm transition-colors duration-300 hover:text-blue-500" aria-label={name}>
       {name}
     </Link>
   );
@@ -61,7 +62,7 @@ function Footer() {
         <div className="flex flex-col items-center text-center">
           <Link href="/" className="flex items-center gap-4">
             <Image src={Logo} alt="Logo" className="aspect-square" />
-            <p className="text-xl font-bold text-textColor">Jemeni</p>
+            <p className="text-textColor text-xl font-bold">Jemeni</p>
           </Link>
 
           <div className="-mx-4 mt-6 flex flex-wrap justify-center">
@@ -75,7 +76,7 @@ function Footer() {
         <hr className="my-6 border-gray-700 md:my-10" />
 
         <div className="flex flex-col-reverse items-center gap-4 sm:flex-row sm:justify-between">
-          <div className="flex flex-col gap-1 text-center text-sm leading-8 text-textColor md:flex-row">
+          <div className="text-textColor flex flex-col gap-1 text-center text-sm leading-8 md:flex-row">
             <p>Built with 💖 and occasional bursts of 😭.</p>
             <Link
               href="/website-stack"

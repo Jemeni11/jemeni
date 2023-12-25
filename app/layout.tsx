@@ -1,6 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Inter } from "next/font/google";
@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: meta.url,
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#142538",
 };
 
