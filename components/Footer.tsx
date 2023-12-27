@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../../public/favicon-32x32.png";
+import Logo from "@/public/favicon-32x32.png";
 
-import DevTo from "../../public/logos/devdotto.svg";
-import Discord from "../../public/logos/discord.svg";
-import GMail from "../../public/logos/gmail.svg";
-import Hashnode from "../../public/logos/hashnode.svg";
-import LinkedIn from "../../public/logos/linkedin.svg";
-import X from "../../public/logos/x.svg";
+import DevTo from "@/public/logos/devdotto.svg";
+import Discord from "@/public/logos/discord.svg";
+import GMail from "@/public/logos/gmail.svg";
+import Hashnode from "@/public/logos/hashnode.svg";
+import LinkedIn from "@/public/logos/linkedin.svg";
+import X from "@/public/logos/x.svg";
 
 const links: {
   name: string;
@@ -78,6 +78,22 @@ function Footer() {
         <div className="flex flex-col-reverse items-center gap-4 sm:flex-row sm:justify-between">
           <div className="text-textColor flex flex-col gap-1 text-center text-sm leading-8 md:flex-row">
             <p>Built with 💖 and occasional bursts of 😭.</p>
+            <p className="text-center text-sm leading-loose md:text-left">
+              Hosted on{" "}
+              <a href="https://vercel.com" target="_blank" rel="noreferrer" className="font-medium underline underline-offset-4">
+                Vercel
+              </a>
+              . The source code is available on{" "}
+              <a
+                href="https://github.com/Jemeni11/jemeni"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium underline underline-offset-4"
+              >
+                GitHub
+              </a>
+              .
+            </p>
             <Link
               href="/website-stack"
               className="transition-underline-offset underline-offset-[16px] duration-200 ease-in-out hover:underline hover:underline-offset-8"

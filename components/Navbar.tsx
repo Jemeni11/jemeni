@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../public/favicon-32x32.png";
-import Menu from "../../public/menu.svg";
+import Logo from "@/public/favicon-32x32.png";
+import Menu from "@/public/menu.svg";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
