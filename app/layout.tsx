@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: meta.title,
     site: meta.url,
     description: meta.description,
-    creator: "@Jemeni11",
+    creator: "@Jemeni11_",
     images: [meta.image],
   },
   alternates: {
